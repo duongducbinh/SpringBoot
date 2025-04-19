@@ -1,0 +1,18 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="jakarta.persistence.jdbc.driver">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="jakarta.persistence.jdbc.url">jdbc:sqlserver://MSI\DUONGBINH:1434;databaseName=HibProj;encrypt=true;trustServerCertificate=true;</property>
+        <property name="jakarta.persistence.jdbc.user">sa</property>
+        <property name="jakarta.persistence.jdbc.password">Phoenix1510@</property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.show_sql">true</property>
+<!--        <property name="hibernate.format_sql">true</property>-->
+        <property name="hibernate.highlight_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Scan entity class -->
+        <mapping class="org.example.Student"/>
+    </session-factory>
+</hibernate-configuration>
