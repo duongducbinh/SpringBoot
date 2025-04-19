@@ -10,7 +10,7 @@ public class Alien {
     private int aid;
     private String aname;
     private String tech;
-    @OneToMany(mappedBy = "alien", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "alien")
     private List<Laptop> laptops;
 
     public int getAid() {
