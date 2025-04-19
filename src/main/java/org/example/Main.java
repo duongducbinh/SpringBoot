@@ -22,9 +22,17 @@ public class Main {
         //System.out.println(laptop);
 
         //use load
-        Laptop laptop2 = session.byId(Laptop.class).getReference(102);
+        Laptop laptop2 = session.get(Laptop.class, 102);
         System.out.println(laptop2);
+        //System.out.println(laptop2);
         session.close();
+
+        Session session1 = sf.openSession();
+
+        Laptop laptop3 = session1.get(Laptop.class, 102);
+        System.out.println(laptop3);
+
+        session1.close();
         sf.close();
 
     }
